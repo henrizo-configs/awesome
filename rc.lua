@@ -242,7 +242,7 @@ root.buttons(gears.table.join(
 -- {{{ Key bindings
 globalkeys = gears.table.join(
    -- My key bindings
-   awful.key({ modkey}, "Up", function () awful.spawn("amixer -D pulse sset Master 5%+") end, {description = "increase volume", group = "custom"}),
+   awful.key({ modkey}, "Up"  , function () awful.spawn("amixer -D pulse sset Master 5%+") end, {description = "increase volume", group = "custom"}),
    awful.key({ modkey}, "Down", function () awful.spawn("amixer -D pulse sset Master 5%-") end, {description = "decrease volume", group = "custom"}),
    awful.key({ modkey, "Shift"}, "m", function () awful.spawn("amixer -D pulse set Master +1 toggle") end, {description = "mute volume", group = "custom"}),
    --
@@ -274,9 +274,9 @@ globalkeys = gears.table.join(
       {description = "show main menu", group = "awesome"}),
 
    -- Layout manipulation
-   awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
+   awful.key({ modkey, "Shift"   }, "a", function () awful.client.swap.byidx(  1)    end,
       {description = "swap with next client by index", group = "client"}),
-   awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
+   awful.key({ modkey, "Shift"   }, "d", function () awful.client.swap.byidx( -1)    end,
       {description = "swap with previous client by index", group = "client"}),
    awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end,
       {description = "focus the next screen", group = "screen"}),
